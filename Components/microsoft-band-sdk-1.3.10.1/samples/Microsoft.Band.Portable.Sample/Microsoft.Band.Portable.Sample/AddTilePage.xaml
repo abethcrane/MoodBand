@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<app:BaseClientContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                           xmlns:app="clr-namespace:Microsoft.Band.Portable.Sample;assembly=Microsoft.Band.Portable.Sample"
+                           xmlns:converters="clr-namespace:Microsoft.Band.Portable.Sample.ValueConverters;assembly=Microsoft.Band.Portable.Sample"
+                           x:Class="Microsoft.Band.Portable.Sample.AddTilePage"
+                           Title="Tile Details">
+
+  <app:BaseClientContentPage.Resources>
+    <ResourceDictionary>
+      <converters:BandImageToImageSourceConverter x:Key="BandImageConverter" />
+      <converters:BandColorToColorConverter x:Key="BandColorConverter" />
+    </ResourceDictionary>
+  </app:BaseClientContentPage.Resources>
+
+  <Grid>
+    <ScrollView>
+      <StackLayout Orientation="Vertical">
+
+        <Label Text="Tile Id:" FontSize="Medium"
+               VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+          <Entry Text="{Binding TileId}"
+                 VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+          <Button Text="Generate" Command="{Binding GenerateTileIdCommand}"
+                  VerticalOptions="Center" HorizontalOptions="End" />
+        </StackLayout>
+
+        <Label Text="Tile Name:" FontSize="Medium"
+               VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+        <Entry Text="{Binding TileName}"
+               VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+          <Label Text="Disable Screen Timeout:" FontSize="Medium"
+                 VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+          <Switch IsToggled="{Binding DisableScreenTimeout}"
+                  VerticalOptions="Center" HorizontalOptions="End" />
+        </StackLayout>
+
+        <Label Text="Tile Icon:" FontSize="Medium"
+               VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+          <Image Source="{Binding TileIcon, Converter={StaticResource BandImageConverter}}"
+                 BackgroundColor="Black" WidthRequest="48" HeightRequest="48"
+                 VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+          <Button Text="Default" Command="{Binding DefaultTileIconCommand}"
+                  VerticalOptions="Center" HorizontalOptions="End" />
+          <Button Text="Select..." Command="{Binding SelectTileIconCommand}"
+                  VerticalOptions="Center" HorizontalOptions="End" />
+        </StackLayout>
+
+        <Label Text="Tile Badge Icon:" FontSize="Medium"
+               VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+        <StackLayout Orientation="Horizontal" 
+                     VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+          <Image Source="{Binding TileBadge, Converter={StaticResource BandImageConverter}}"
+                 BackgroundColor="Black" WidthRequest="48" HeightRequest="48"
+                 VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+          <Button Text="Default" Command="{Binding DefaultTileBadgeCommand}"
+                  VerticalOptions="Center" HorizontalOptions="End" />
+          <Button Text="Select..." Command="{Binding SelectTileBadgeCommand}"
+                  VerticalOptions="Center" HorizontalOptions="End" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+          <Label Text="Custom Theme:" FontSize="Medium"
+                 VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+          <Switch IsToggled="{Binding UseCustomTheme}"
+                  VerticalOptions="Center" HorizontalOptions="End" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" IsVisible="{Binding UseCustomTheme}" 
+                     VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+          <Button Text="Default" Command="{Binding DefaultThemeCommand}" 
+                  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+          <Button Text="Edit..." Clicked="ChangeThemeButtonClicked" 
+                  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        
+        <app:ThemeView Theme="{Binding TileTheme}" IsVisible="{Binding UseCustomTheme}"
+                       HeightRequest="48" WidthRequest="288"
+                       VerticalOptions="Start" HorizontalOptions="CenterAndExpand" />
+
+      </StackLayout>
+    </ScrollView>
+  </Grid>
+
+</app:BaseClientContentPage>

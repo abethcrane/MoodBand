@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/setMoodButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setMoodString" />
+    <Button
+        android:id="@+id/skinTempButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/skinTempString" />
+    <Button
+        android:id="@+id/skinTempStopButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/skinTempStopString" />
+    <Button
+        android:id="@+id/updateAverageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/updateAverageString" />
+    <TextView
+        android:text="Your skin temperature info:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/temperatureTitle" />
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/temperatureInfo" />
+</LinearLayout>

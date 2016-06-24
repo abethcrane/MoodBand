@@ -1,0 +1,13 @@
+/Users/beth/Projects/Moodband/iOS/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/beth/Projects/Moodband/iOS/obj/iPhoneSimulator/Debug/ibtool/LaunchScreen.nib
+/Users/beth/Projects/Moodband/iOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+/Users/beth/Projects/Moodband/iOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/Info.plist
+/Users/beth/Projects/Moodband/iOS/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/UIViewController-BYZ-38-t0r.nib
+/Users/beth/Projects/Moodband/iOS/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
+/Users/beth/Projects/Moodband/iOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist
+/Users/beth/Projects/Moodband/iOS/obj/iPhoneSimulator/Debug/actool/asset-manifest.plist
+/Users/beth/Projects/Moodband/iOS/obj/iPhoneSimulator/Debug/actool/_PartialAppManifest.items
+/Users/beth/Projects/Moodband/iOS/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
+/Users/beth/Projects/Moodband/iOS/obj/iPhoneSimulator/Debug/optimized/
+/Users/beth/Projects/Moodband/iOS/bin/iPhoneSimulator/Debug/Microsoft.Band.iOS.dll
+/Users/beth/Projects/Moodband/iOS/bin/iPhoneSimulator/Debug/Microsoft.Band.Portable.dll

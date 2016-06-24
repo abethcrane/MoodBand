@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="Droid/Moodband.Droid.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Moodband/MyClass.cs">
+    <Files>
+      <File FileName="Droid/MainActivity.cs" Line="98" Column="76" />
+      <File FileName="Moodband/MyClass.cs" Line="131" Column="5" />
+      <File FileName="Droid/SkinTempAlarm.cs" Line="11" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/beth/Projects/Moodband/Moodband/MyClass.cs" line="127" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Moodband.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus_5_API_23" />
+</Properties>

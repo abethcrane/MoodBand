@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<app:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:app="clr-namespace:Microsoft.Band.Portable.Sample;assembly=Microsoft.Band.Portable.Sample"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     x:Class="Microsoft.Band.Portable.Sample.ClientPage"
+                     Title="{Binding BandName}">
+
+  <Grid>
+    <ScrollView>
+      <StackLayout Orientation="Vertical">
+
+        <Label Text="Band Name:" FontSize="Medium"
+               VerticalOptions="Start" HorizontalOptions="StartAndExpand" />
+        <Label Text="{Binding BandName}" FontSize="Small"
+               VerticalOptions="Start" HorizontalOptions="StartAndExpand" />
+
+        <Label Text="Is Connected:" FontSize="Medium"
+               VerticalOptions="Start" HorizontalOptions="StartAndExpand" />
+        <Label Text="{Binding IsConnected}" FontSize="Small"
+               VerticalOptions="Start" HorizontalOptions="StartAndExpand" />
+
+        <Label Text="Firmware Version:" FontSize="Medium"
+               VerticalOptions="Start" HorizontalOptions="StartAndExpand" />
+        <Label Text="{Binding FirmwareVersion}" FontSize="Small"
+               VerticalOptions="Start" HorizontalOptions="StartAndExpand" />
+
+        <Label Text="Hardware Version:" FontSize="Medium"
+               VerticalOptions="Start" HorizontalOptions="StartAndExpand" />
+        <Label Text="{Binding HardwareVersion}" FontSize="Small"
+               VerticalOptions="Start" HorizontalOptions="StartAndExpand" />
+
+        <Button Text="Sensors" Clicked="SensorsButtonClick"
+                VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+
+        <Button Text="Tiles" Clicked="TilesButtonClick"
+                VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+
+        <Button Text="Vibrations" Clicked="VibrationsButtonClick"
+                VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+
+        <Button Text="Personalization" Clicked="PersonalizationButtonClick"
+                VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+
+      </StackLayout>
+    </ScrollView>
+
+    <!-- Loading -->
+    <ContentView BackgroundColor="Black" Opacity="0.66" IsVisible="{Binding IsLoading}"
+                 VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+    <Grid IsVisible="{Binding IsLoading}"
+          VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+      <ContentView BackgroundColor="White" Opacity="0.66"
+                   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+      <StackLayout Orientation="Vertical" Padding="12, 12, 12, 12"
+                   VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+          <ActivityIndicator IsVisible="True" IsRunning="True" Color="Black" />
+          <Label Text="Connecting. Please wait..." FontSize="Medium"
+                 VerticalOptions="Center" HorizontalOptions="Center" />
+      </StackLayout>
+    </Grid>
+  </Grid>
+
+</app:BaseContentPage>

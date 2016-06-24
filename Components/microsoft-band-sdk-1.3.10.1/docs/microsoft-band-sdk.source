@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<monodoc>
+  <node label="Xamarin Components" name="components" parent="libraries" />
+  <node label="Microsoft Band SDK" name="microsoft-band-sdk" parent="components" />
+  <source provider="ecma" basefile="microsoft-band-sdk" path="microsoft-band-sdk" />
+</monodoc>

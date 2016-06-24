@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <Jars></Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>/Users/beth/Projects/Moodband/Droid/obj/Debug/__library_projects__/Microsoft.Band.Android/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/beth/Projects/Moodband/Droid/obj/Debug/__library_projects__/Microsoft.Band.Portable/library_project_imports/res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>/Users/beth/Projects/Moodband/Droid/obj/Debug/__library_projects__/Microsoft.Band.Android/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>/Users/beth/Projects/Moodband/Droid/obj/Debug/__library_projects__/Microsoft.Band.Portable/library_project_imports/assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
+  <ResolvedEnvironmentFiles />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>/Users/beth/Projects/Moodband/Droid/obj/Debug/__library_projects__/Microsoft.Band.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/beth/Projects/Moodband/Droid/obj/Debug/__library_projects__/Microsoft.Band.Portable.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
+</Paths>

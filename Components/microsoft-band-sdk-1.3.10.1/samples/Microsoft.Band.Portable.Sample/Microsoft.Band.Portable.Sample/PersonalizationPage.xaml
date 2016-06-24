@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<app:BaseClientContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                           xmlns:app="clr-namespace:Microsoft.Band.Portable.Sample;assembly=Microsoft.Band.Portable.Sample"
+                           xmlns:converters="clr-namespace:Microsoft.Band.Portable.Sample.ValueConverters;assembly=Microsoft.Band.Portable.Sample"
+                           x:Class="Microsoft.Band.Portable.Sample.PersonalizationPage"
+                           Title="Personalization">
+
+  <app:BaseClientContentPage.Resources>
+    <ResourceDictionary>
+      <converters:BandImageToImageSourceConverter x:Key="BandImageConverter" />
+      <converters:BandColorToColorConverter x:Key="BandColorConverter" />
+    </ResourceDictionary>
+  </app:BaseClientContentPage.Resources>
+
+  <Grid>
+    <ScrollView>
+      <StackLayout Orientation="Vertical">
+
+        <!-- Me Tile -->
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+          <Label Text="Me Tile Image:" FontSize="Medium"
+                 VerticalOptions="Center" HorizontalOptions="Start" />
+        </StackLayout>
+               
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+          <Button Text="Default" Command="{Binding DefaultMeTileImageCommand}"
+                  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+          <Button Text="Select..." Command="{Binding SelectMeTileImageCommand}"
+                  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+          <Button Text="Save" Command="{Binding SetMeTileImageCommand}"
+                  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        
+        <Image Source="{Binding MeTileImage, Converter={StaticResource BandImageConverter}}"
+               VerticalOptions="Start" HorizontalOptions="CenterAndExpand" />
+
+        <!-- Theme -->
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+          <Label Text="Band Theme:" FontSize="Medium"
+                 VerticalOptions="Center" HorizontalOptions="Start" />
+        </StackLayout>
+               
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+          <Button Text="Default" Command="{Binding DefaultBandThemeCommand}"
+                  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+          <Button Text="Edit..." Clicked="ChangeThemeButtonClicked"
+                  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+          <Button Text="Save" Command="{Binding SetBandThemeCommand}"
+                  VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        
+        <app:ThemeView Theme="{Binding BandTheme}" HeightRequest="48" WidthRequest="288"
+                       VerticalOptions="Start" HorizontalOptions="CenterAndExpand" />
+
+      </StackLayout>
+    </ScrollView>
+
+    <!-- Loading -->
+    <ContentView BackgroundColor="Black" Opacity="0.66" IsVisible="{Binding IsLoading}"
+                 VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+    <Grid IsVisible="{Binding IsLoading}"
+          VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+      <ContentView BackgroundColor="White" Opacity="0.66"
+                   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+      <StackLayout Orientation="Vertical" Padding="12, 12, 12, 12"
+                   VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+          <ActivityIndicator IsVisible="True" IsRunning="True" Color="Black" />
+          <Label Text="Connecting. Please wait..." FontSize="Medium"
+                 VerticalOptions="Center" HorizontalOptions="Center" />
+      </StackLayout>
+    </Grid>
+  </Grid>
+
+</app:BaseClientContentPage>
